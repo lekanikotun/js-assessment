@@ -3,10 +3,12 @@ exports = (typeof window === 'undefined') ? global : window;
 exports.functionsAnswers = {
   argsAsArray : function(fn, arr) {
 
+     fn.apply(arr);
+
   },
 
   speak : function(fn, obj) {
-
+     fn.bind(obj);
   },
 
   functionFunction : function(str) {
