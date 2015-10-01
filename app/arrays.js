@@ -67,10 +67,15 @@ exports.arraysAnswers = {
 
   count : function(arr, item) {
 
-
-    arr.filter(function() {
-
-    })
+    var cnt = 0;
+    while (arr.indexOf(item) > -1) {
+      cnt++;
+      var ind = arr.indexOf(item);
+      arr.splice(ind, 1);
+      
+    }
+    return cnt;
+    
   },
 
   duplicates : function(arr) {
